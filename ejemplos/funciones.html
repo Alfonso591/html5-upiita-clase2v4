@@ -5,11 +5,71 @@
         <script>
         
             //funcion
+            function saludar(nombre)
+            {
+            	//alert("Buenos Dias " + nombre);
+            	return  0;
+            }
             
+            var numero = saludar("Alfonso");
             //funcion anonima
+            
+            var c=0;
+            
+            var sumar = function(a, b)
+            {
+            	var c = a + b;
+            	return c;
+            };            
+            
+            var multiplicar = function(a,b)
+            {
+            	return a*b;
+            };
+            document.write("<h2> Valor de c: " + c + "</h2>");
+            document.write("<h2> Sumar: " + (sumar(2,4)) + "</h2>");
+            document.write("<h2> Multiplicar: " + (multiplicar(2,4)) + "</h2>");
             
             //una funcion como argumento
             //sepuede definir ahi mismo
+            
+            
+            var operacion = function(miFuncion)
+            {
+            	var resultado = miFuncion(2,3);
+            	alert("El resutlado es: " + resultado);
+            	
+            };
+            
+            
+            operacion(sumar);
+            operacion(multiplicar);
+            
+            
+            
+            var miClosure = function()
+            {
+            	var func = function()
+            		{       			
+            		};
+            	var dato = 5;             	
+            };
+            
+            
+            
+            //Funcion autoejectuable
+            
+            (function()
+            {
+            	var func = function()
+            		{            			
+            		};
+            	var dato = 5;
+            	func();             	
+            })();
+            
+
+
 
         </script>
     </head>
