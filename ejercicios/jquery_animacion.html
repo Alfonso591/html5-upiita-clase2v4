@@ -18,8 +18,39 @@
 		</style>
 		
 		<script src="../javascript/jquery-1.10.2.min.js"></script>
-		<script>		
-
+		<script>
+			$(function()
+				{
+					var boton = $("#boton-animar");
+					var estado = $("#estado");
+					var imagen = $("#contenedor img");
+					
+					boton.click
+					(
+						function()
+						{
+						if(estado.html() === "Imagen 1")
+						{
+							imagen.slideUp("slow", function()
+							{
+								imagen.attr("src", "../imagenes/galeria/preview2.jpg");
+								estado.html("Imagen 2");
+								imagen.slideDown();
+							});
+						}
+						else
+						{
+							imagen.slideUp("slow", function()
+							{
+								imagen.attr("src", "../imagenes/galeria/preview1.jpg");
+								estado.html("Imagen 1");
+								imagen.slideDown();
+							});
+						}	
+						}
+					);
+				}			
+			);
 		</script>
 
 	</head>
@@ -32,10 +63,8 @@
 		</p>
 
 		<div id="contenedor">
-			<img src="../imagenes/sad_homer.jpg" />
-			<p id="estado">
-				Homero Triste
-			</p>
+			<img src="../imagenes/galeria/preview1.jpg" />
+			<p id="estado">Imagen 1</p>
 		</div>
 		
 
